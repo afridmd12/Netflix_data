@@ -1,5 +1,7 @@
 🎬 Netflix Data Cleaning & Preprocessing
+
 📌 Project Overview
+
 This project focuses on transforming a raw Netflix dataset into a clean and structured format suitable for analysis and modeling. The dataset, sourced from Kaggle, contains real-world inconsistencies such as:
 •	Missing values
 •	Duplicate entries
