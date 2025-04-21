@@ -20,7 +20,7 @@ ________________________________________
 •	Size: ~8,807 entries with 12 columns
 ________________________________________
 🧼 Data Cleaning & Preprocessing Steps
-🔹 Handling Missing Values
+🔹 Handling hjMissing Values
 •	Identified missing values using isnull().
 •	Categorical columns (director, cast, country):
 o	Filled missing entries with placeholders (e.g., "Unknown") or most frequent value.
