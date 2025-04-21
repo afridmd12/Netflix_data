@@ -1,4 +1,4 @@
-Netflix Data Cleaning & Preprocessing
+🎬 Netflix Data Cleaning & Preprocessing
 
 📌 Project Overview
 
