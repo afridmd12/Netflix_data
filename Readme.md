@@ -1,17 +1,25 @@
 🎬 Netflix Data Cleaning & Preprocessing
 📌 Project Overview
-This project focuses on transforming a raw Netflix dataset into a clean and structured format suitable for analysis and modeling. The dataset, sourced from Kaggle, contains real-world inconsistencies such as missing values, duplicate entries, and improperly formatted columns. The primary objective is to resolve these issues and prepare the data for meaningful insights and visualizations.
+This project focuses on transforming a raw Netflix dataset into a clean and structured format suitable for analysis and modeling. The dataset, sourced from Kaggle, contains real-world inconsistencies such as:
+
+Missing values
+
+Duplicate entries
+
+Improperly formatted columns
+
+The goal is to address these issues to facilitate meaningful insights and ensure high-quality data for further exploration or machine learning applications.
 
 🧰 Tools & Libraries Used
-🐍 Python 3.x – Core programming language
+🐍 Python 3.x – Programming language
 
-🐼 Pandas – Data manipulation and wrangling
+🐼 Pandas – Data manipulation and analysis
 
 🔢 NumPy – Numerical operations
 
 📊 Matplotlib – Basic visualizations
 
-📉 Seaborn – Advanced data visualizations
+📉 Seaborn – Enhanced data visualizations
 
 ☁️ Google Colab – Cloud-based development environment
 
@@ -20,47 +28,52 @@ Dataset Name: netflix_titles.csv
 
 Source: Kaggle – Netflix Dataset
 
-Size: ~8,807 entries × 12 columns
+Size: ~8,807 entries with 12 columns
 
 🧼 Data Cleaning & Preprocessing Steps
-Handling Missing Values
+🔹 Handling Missing Values
+Identified missing values using isnull().
 
-Used isnull() to detect nulls.
+Categorical columns (director, cast, country):
 
-Filled categorical columns (director, cast, country) with placeholders or most frequent values.
+Filled missing entries with placeholders (e.g., "Unknown") or most frequent value.
 
-Applied mean/mode imputation for numerical values where applicable.
+Numerical columns:
 
-Removing Duplicates
+Applied mean or mode imputation as appropriate.
 
-Used duplicated() to identify and remove redundant entries.
+🔹 Removing Duplicates
+Used duplicated() to find and drop duplicate rows to ensure data integrity.
 
-Standardizing Categorical Data
+🔹 Standardizing Categorical Data
+Standardized entries in columns such as type, rating, and listed_in by:
 
-Converted entries in columns like type, rating, and listed_in to lowercase and trimmed whitespace for uniformity.
+Converting all text to lowercase
 
-Converting Data Types
+Trimming leading/trailing whitespace
 
-Transformed date_added to datetime format.
+🔹 Converting Data Types
+Converted date_added to datetime format to enable time-based analysis.
 
-Parsed duration into a new column duration_int, reflecting:
+Extracted numerical values from duration and created a new column duration_int:
 
-Minutes for movies
+Movies: duration in minutes
 
-Number of seasons for TV shows
+TV Shows: number of seasons
 
-Renaming Columns
+🔹 Renaming Columns
+Renamed all column names to lowercase
 
-Renamed all columns to lowercase and replaced spaces with underscores (e.g., Date Added → date_added).
+Replaced spaces with underscores for easier referencing (e.g., Date Added → date_added)
 
-Data Filtering
-
-Dropped rows lacking critical information (director, cast, country) to enhance dataset reliability.
+🔹 Data Filtering
+Removed rows with missing critical information in director, cast, and country to improve dataset quality.
 
 💡 Key Insights
-Clean and consistent data is foundational for accurate analysis and modeling.
+Clean data is crucial for reliable analysis and model performance.
 
-Imputation methods should align with the data type and project context.
+Choose imputation methods that align with the type and importance of the data.
 
-Standardizing column formats minimizes errors and improves overall data accessibility.
+Consistent formatting reduces errors and boosts data usability.
 
+Data cleaning is not just technical—it's a strategic step in any data project.
